@@ -1,12 +1,16 @@
 * {
-    font-family: JetBrainsMono NFP, FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    /*font-family: JetBrainsMono NFP, FontAwesome, Roboto, Helvetica, Arial, sans-serif;*/
+  /*font-family: CozetteHiDpi;*/
+  font-family: JetBrainsMono NFP;
     font-size: 14px;
-    font-weight: bold;
+    /*font-weight: bold;*/
 }
 
 window#waybar {
-    background-color: rgba(26, 24, 35, 1);
-    border-bottom: 3px solid rgba(19, 16, 32, 1);
+    /*background-color: rgba(26, 24, 35, 1);*/
+  background-color: rgba(26, 24, 35, 0);
+    /*border-bottom: 3px solid rgba(19, 16, 32, 1);*/
+  border-bottom: 3px solid rgba(19, 16, 32, 0);
     color: #ffffff;
     transition-property: background-color;
     transition-duration: .5s;
@@ -135,14 +139,6 @@ label:focus {
 }
 #backlight {
     background-color: #90b1b1;
-}
-
-#network {
-    background-color: #2980b9;
-}
-
-#network.disconnected {
-    background-color: #f53c3c;
 }
 
 #pulseaudio {

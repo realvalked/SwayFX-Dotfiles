@@ -1,13 +1,10 @@
 {
-    "height": 30,
-    // "width": 1280,
-    "spacing": 4,
+    "height": 20,
     "modules-left": ["clock"],
     "modules-center": ["sway/workspaces"],
     "modules-right": ["pulseaudio", "tray"],
     "tray": {
-        // "icon-size": 21,
-        "spacing": 4
+        "spacing": 10
     },
     "clock": {
 "format": "{: %A, %b %d  -   %H:%M:%S}",
@@ -28,7 +25,7 @@
         "format-charging": "{capacity}% ",
         "format-plugged": "{capacity}% ",
         "format-alt": "{time} {icon}",
-        // "format-good": "", // An empty format will hide the module
+        // "format-good": "",
         // "format-full": "",
         "format-icons": ["", "", "", "", ""]
     },
