@@ -3,6 +3,7 @@
     "modules-left": ["clock"],
     "modules-center": ["sway/workspaces"],
     "modules-right": ["pulseaudio", "tray"],
+    // "modules-right": ["backlight", "battery", "pulseaudio", "tray"],
     "tray": {
         "spacing": 10
     },
