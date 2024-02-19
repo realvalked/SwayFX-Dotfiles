@@ -86,7 +86,7 @@ exec_always sh -c "killall waybar; waybar &"
 # exec_always --no-startup-id workstyle &> /tmp/workstyle.log
 
 # take a screenshot
-#bindsym Print exec grim -g "$(slurp)" - | swappy -f -
+bindsym Shift+Print exec grim -g "$(slurp)" - | swappy -f -
 bindsym Print exec grim -g "$(slurp)" - | wl-copy
 
 # rofi
