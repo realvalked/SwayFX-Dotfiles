@@ -1,0 +1,46 @@
+{
+    "height": 25,
+    "modules-left": ["clock"],
+    "modules-center": ["sway/workspaces"],
+    "modules-right": ["pulseaudio", "tray"],
+    // "modules-right": ["backlight", "battery", "pulseaudio", "tray"],
+    "tray": {
+        "spacing": 10
+    },
+"clock": {
+"format": "{:%A, %b %d  -  %H:%M:%S}",
+"interval": 1
+    },
+    "backlight": {
+        // "device": "acpi_video1",
+        "format": "{percent}% {icon}",
+        "format-icons": ["", "", "", "", "", "", "", "", ""]
+    },
+    "battery": {
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{time} {icon}",
+        // "format-good": "",
+        // "format-full": "",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "battery#bat2": {
+        "bat": "BAT2"
+    },
+    "pulseaudio": {
+        "scroll-step": 1,
+        "format": "{volume}% {icon}",
+        "format-muted": "{volume}% ",
+        "format-icons": {
+            "default": ["", "", ""]
+        },
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+	// "on-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+    }
+}
