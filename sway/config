@@ -15,18 +15,18 @@ xwayland enable
 ################################################################################
 
 # greet on startup
-exec kitty & firefox
+exec firefox
 
 # make sure to autostart pipewire-pulse and wireplumber along with pipewire
 exec pipewire & pipewire-pulse & wireplumber
 
 # cursor (needs fixing)
- #seat seat0 {
- #   xcursor_theme Catppuccin-Mocha-Green-Cursors 32
-#}
+seat seat0 {
+xcursor_theme Catppuccin-Mocha-Green-Cursors 32
+}
 
 # Autotiling
-exec_always pkill autotiling && autotiling
+exec_always autotiling
 
 # swayfx (comment if you're using normal sway)
 blur enable
@@ -54,33 +54,27 @@ exec --no-startup-id /usr/lib/xfce-polkit/xfce-polkit
 exec_always wlsunset -l 44.4 -L 26.1
 
 # swaylock
-bindsym $mod+l exec swaylock --clock --indicator --screenshots --effect-scale 0.4 --effect-vignette 0.2:0.5 --effect-blur 4x2 --datestr "%a %e.%m.%Y" --timestr "%k:%M:%S"
+#bindsym $mod+l exec swaylock --clock --indicator --screenshots --effect-scale 0.4 --effect-vignette 0.2:0.5 --effect-blur 4x2 --datestr "%a %e.%m.%Y" --timestr "%k:%M:%S"
+bindsym $mod+l exec swaylock --color 000000
 # autostart applications
 exec corectrl && easyeffects --gapplication-service
 
 # monitor and wallpaper
 output DP-1 mode 1920x1080@240Hz pos 0 0 bg ~/.config/Wallpapers/united.jpg fill
 
-# disable mouse accel
-input type:pointer {
-    accel_profile flat
+input * {
+accel_profile flat
+
+xkb_layout "us,canary"
+#xkb_variant ",tilde,"
+xkb_options "compose:menu,grp:shifts_toggle,caps:backspace"
+
+repeat_delay 400
+repeat_rate 100
 }
-
-# different keyboard layouts
-#input type:keyboard {
-#        xkb_layout us,latam
-#}
-# bindsym $mod+0 input type:keyboard xkb_switch_layout next
-
-# 
+ 
 for_window [app_id=".*osu!.*"] max_render_time 2
 default_border none
-
-# keyboard repeat rate
-input type:keyboard {
-    repeat_delay 400
-    repeat_rate 100
-}
 
 bar swaybar_command waybar
 # workstyle
